@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct PomoTimerDevApp: App {
+    @StateObject private var calendarManager = CalendarManager()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(calendarManager)
         }
     }
 }

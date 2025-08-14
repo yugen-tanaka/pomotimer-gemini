@@ -10,9 +10,22 @@
 		501D11CC2E4DE52500683700 /* PomoTimerDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomoTimerDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		501D11E02E4DEAFD00683700 /* Exceptions for "PomoTimerDev" folder in "PomoTimerDev" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 501D11CB2E4DE52500683700 /* PomoTimerDev */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		501D11CE2E4DE52500683700 /* PomoTimerDev */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				501D11E02E4DEAFD00683700 /* Exceptions for "PomoTimerDev" folder in "PomoTimerDev" target */,
+			);
 			path = PomoTimerDev;
 			sourceTree = "<group>";
 		};
@@ -258,6 +271,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PomoTimerDev/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "ポモドーロ実施記録を行うためにアクセスが必要です。";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -285,6 +300,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PomoTimerDev/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "ポモドーロ実施記録を行うためにアクセスが必要です。";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
