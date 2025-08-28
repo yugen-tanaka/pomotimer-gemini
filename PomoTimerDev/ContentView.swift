@@ -1,5 +1,6 @@
 import SwiftUI
 import Combine
+import UserNotifications
 
 struct ContentView: View {
     @EnvironmentObject var calendarManager: CalendarManager
@@ -100,6 +101,7 @@ struct TimerView: View {
                     timerRemaining -= 1
                 } else {
                     isTimerRunning = false
+                    sendNotification()
                     switchMode()
                 }
             }
@@ -174,6 +176,26 @@ struct TimerView: View {
             timerMode = .pomodoro
             timerRemaining = 25 * 60
         }
+    }
+    
+    private func sendNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "PomoTimer"
+        
+        switch timerMode {
+        case .pomodoro:
+            content.body = "Pomodoro session finished! Time for a break."
+        case .shortBreak:
+            content.body = "Short break finished! Time to focus."
+        case .longBreak:
+            content.body = "Long break finished! Time to get back to it."
+        }
+        
+        content.sound = UNNotificationSound.default
+
+        // 即時通知
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
+        UNUserNotificationCenter.current().add(request)
     }
 }
 
